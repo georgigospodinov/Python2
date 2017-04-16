@@ -1,9 +1,14 @@
 import csv
 
-input_file = "values.csv"
-
 def get_values():
-    inf = csv.reader(open(input_file))
+    """
+        Get the lists of possible values for each variable.
+        Read these values from a file "values.csv".
+
+        :return: A list that contains all lists of values
+        :rtype: list
+    """
+    inf = csv.reader(open("values.csv"))
     drgDef_list = inf.__next__()
     providerId_list = inf.__next__()
     providerName_list = inf.__next__()
